@@ -1,0 +1,1 @@
+{"Messages":[{"To":[{"Email":"w@zwartopwit.be","Name":null}],"Subject":"subject","From":{"Email":"from@example.com","Name":null},"TextPart":"text template","Attachments":[{"Base64Content":"RmlsaXNoIGNvbnRlbnQ=\n","ContentType":"application/pdf","Filename":"file.pdf"}],"Headers":{"Reply-To":"noreply@zwartopwit.be"}}]}

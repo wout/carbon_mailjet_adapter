@@ -1,0 +1,26 @@
+name: carbon_mailjet_adapter
+version: 0.1.0
+
+authors:
+  - Wout <hi@wout.codes>
+
+crystal: ">= 1.10.0"
+
+license: MIT
+
+dependencies:
+  carbon:
+    github: luckyframework/carbon
+    version: ~> 0.5.1
+  mailjet:
+    github: wout/mailjet.cr
+    version: ~> 0.6.0
+
+development_dependencies:
+  ameba:
+    github: crystal-ameba/ameba
+  webmock:
+    github: manastech/webmock.cr
+    branch: master
+  spec_mirror:
+    github: wout/spec_mirror.cr
