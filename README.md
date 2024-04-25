@@ -22,7 +22,7 @@ Include the shard:
 require "carbon_mailjet_adapter"
 ```
 
-Then, configure [mailjet.cr](https://github.com/wout/mailjet.cr):
+Configure [mailjet.cr](https://github.com/wout/mailjet.cr):
 
 ```crystal
 Mailjet.configure do |settings|
@@ -32,9 +32,22 @@ Mailjet.configure do |settings|
 end
 ```
 
-## Important
+And configure the adapter in your Lucky app:
 
-For simplicity and predictability, this adapter will always send using mailjet's v3.1 sending API, regardless of the Mailjet configuration in your project.
+```crystal
+# config/email.cr
+require "carbon_mailjet_adapter"
+
+BaseEmail.configure do |settings|
+  if LuckyEnv.production? || LuckyEnv.staging?
+    settings.adapter = Carbon::MailjetAdapter.new
+  elsif ...
+    ...
+  end
+end
+```
+
+**Important:** For simplicity and predictability, this adapter will always send using Mailjet's v3.1 sending API, regardless of the Mailjet configuration in your project.
 
 ## Contributing
 
